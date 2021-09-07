@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Client_GUI/Client_GUI.iml" filepath="$PROJECT_DIR$/Client_GUI/Client_GUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Multi-Threaded_Dictionary_Server_source_code.iml" filepath="$PROJECT_DIR$/.idea/Multi-Threaded_Dictionary_Server_source_code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Server/Server.iml" filepath="$PROJECT_DIR$/Server/Server.iml" />
+    </modules>
+  </component>
+</project>

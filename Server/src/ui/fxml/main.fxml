@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import com.jfoenix.controls.JFXTextField?>
+<Tab xmlns="http://javafx.com/javafx"
+     xmlns:fx="http://javafx.com/fxml"
+     fx:controller="ui.controllers.MainController" fx:id="mainTab" closable="false" styleClass="tab-main" text="Server">
+    <content>
+        <AnchorPane fx:id="mainPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+                <VBox prefHeight="412.0" prefWidth="557.0" AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="0.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="412.0" prefWidth="557.0" AnchorPane.bottomAnchor="0.0"
+                              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                              AnchorPane.topAnchor="0.0">
+                            <children>
+                                <ImageView visible="true" fx:id="imageDown" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@down.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                            <children>
+                                <ImageView visible="false" fx:id="imageUp" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image  url="@up.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                            <children>
+                                <HBox visible="false" fx:id="IPLabel" alignment="CENTER"
+                                >
+                                    <Text
+                                          fontSmoothingType="LCD" layoutX="87.0"
+                                          strokeType="OUTSIDE" strokeWidth="0.0"
+                                          styleClass="label-text"
+                                          text="IP Address:"/>
+                                    <children>
+                                        <VBox alignment="CENTER" spacing="20.0">
+
+                                            <HBox.margin>
+
+                                                <Insets bottom="20.0" left="20.0" right="20.0"
+                                                        top="20.0"/>
+                                            </HBox.margin>
+                                            <children>
+                                                <Text fx:id="serverIP"
+                                                      fontSmoothingType="LCD" layoutX="87.0"
+                                                      layoutY="228.0"
+                                                      strokeType="OUTSIDE" strokeWidth="0.0"
+                                                      styleClass="main-text"
+                                                      text="localhost"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                                <HBox visible="false" fx:id="portLabel" alignment="CENTER">
+                                    <Text
+                                          fontSmoothingType="LCD" layoutX="87.0" layoutY="228.0"
+                                          strokeType="OUTSIDE" strokeWidth="0.0"
+                                          styleClass="label-text"
+                                          text="Port:    "/>
+                                    <children>
+                                        <VBox alignment="CENTER" spacing="20.0">
+
+                                            <HBox.margin>
+
+                                                <Insets bottom="20.0" left="20.0" right="20.0"
+                                                        top="20.0"/>
+                                            </HBox.margin>
+                                            <children>
+                                                <Text fx:id="serverPort"
+                                                      fontSmoothingType="LCD" layoutX="87.0"
+                                                      layoutY="228.0"
+                                                      strokeType="OUTSIDE" strokeWidth="0.0"
+                                                      styleClass="main-text"
+                                                      text="9090"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                                <HBox visible="false" fx:id="machineLabel" alignment="CENTER">
+                                    <Text
+                                          fontSmoothingType="LCD" layoutX="87.0" layoutY="228.0"
+                                          strokeType="OUTSIDE" strokeWidth="0.0"
+                                          styleClass="label-text"
+                                          text="Machine:"/>
+                                    <children>
+                                        <VBox alignment="CENTER" spacing="20.0">
+
+                                            <HBox.margin>
+
+                                                <Insets bottom="20.0" left="20.0" right="20.0"
+                                                        top="20.0"/>
+                                            </HBox.margin>
+                                            <children>
+                                                <Text fx:id="serverMachine"
+                                                      fontSmoothingType="LCD" layoutX="87.0"
+                                                      layoutY="228.0"
+                                                      strokeType="OUTSIDE" strokeWidth="0.0"
+                                                      styleClass="main-text"
+                                                      text="machine"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                                <HBox visible="true" fx:id="portBox" alignment="CENTER">
+                                    <children>
+                                        <VBox alignment="CENTER" spacing="20.0">
+
+                                            <HBox.margin>
+
+                                                <Insets bottom="20.0" left="20.0" right="20.0"
+                                                        top="20.0"/>
+                                            </HBox.margin>
+                                            <children>
+                                                <JFXTextField  fx:id="portInput" labelFloat="true" prefHeight="26.0" prefWidth="230.0" promptText="Server port" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                                <HBox visible="true" fx:id="threadPoolBox" alignment="CENTER">
+                                    <children>
+                                        <VBox alignment="CENTER" spacing="20.0">
+
+                                            <HBox.margin>
+
+                                                <Insets bottom="20.0" left="20.0" right="20.0"
+                                                        top="20.0"/>
+                                            </HBox.margin>
+                                            <children>
+                                                <JFXTextField fx:id="threadPoolInput" labelFloat="true" prefHeight="26.0" prefWidth="230.0" promptText="Thread pool size" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+
+                                <HBox fx:id="wer" alignment="CENTER">
+                                    <children>
+                                        <VBox alignment="CENTER" spacing="20.0">
+
+                                            <HBox.margin>
+
+                                                <Insets bottom="20.0" left="20.0" right="20.0"
+                                                        top="20.0"/>
+                                            </HBox.margin>
+                                            <children>
+                                                <Text  visible="false" fx:id="timer"
+                                                       fontSmoothingType="LCD" layoutX="87.0"
+                                                       layoutY="228.0"
+                                                       strokeType="OUTSIDE" strokeWidth="0.0"
+                                                       styleClass="timer-text"
+                                                       text="00:00"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                            <children>
+                                <JFXButton fx:id="btnStart" prefHeight="44.0"
+                                           onAction="#startServer"
+                                           prefWidth="151.0" text="Start Server"
+                                           styleClass="button-start">
+                                    <HBox.margin>
+                                        <Insets/>
+                                    </HBox.margin>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0"
+                                                top="10.0"/>
+                                    </padding>
+                                </JFXButton>
+                            </children>
+                            <children>
+                                <JFXButton  visible="false" fx:id="btnStop" prefHeight="44.0"
+                                            onAction="#stopServer"
+                                            prefWidth="151.0" text="Stop Server"
+                                            styleClass="button-stop">
+                                    <HBox.margin>
+                                        <Insets/>
+                                    </HBox.margin>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0"
+                                                top="10.0"/>
+                                    </padding>
+                                </JFXButton>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </content>
+</Tab>
+

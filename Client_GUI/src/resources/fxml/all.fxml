@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<StackPane fx:id="all" stylesheets="@/resources/style/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+    <children>
+        <AnchorPane id="AnchorPane" fx:id="mainContainer" prefHeight="625.0" prefWidth="900.0" styleClass="custom-pane" >
+            <children>
+                <VBox prefHeight="256.0" prefWidth="404.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <HBox  alignment="BASELINE_LEFT" styleClass="tab"  prefHeight="50.0" prefWidth="404.0" spacing="600.0">
+                            <children>
+                                <Text fx:id="serverConfigText" text="localhost:9090" styleClass="label-text">
+                                    <HBox.margin>
+                                        <Insets left="10.0"  />
+                                    </HBox.margin>
+                                </Text>
+                            </children>
+                            <children>
+                                <JFXButton styleClass="button-fab" onAction="#config" contentDisplay="LEFT" prefWidth="150.0">
+                                    configure
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="10.0" top="10.0" bottom="10.0" />
+                                    </HBox.margin>
+                                </JFXButton>
+
+                            </children>
+                        </HBox>
+                    </children>
+                    <children>
+                        <JFXTextField fx:id="searchTextField" labelFloat="true" promptText="search">
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" top="20.0" bottom="10.0" />
+                            </VBox.margin>
+                        </JFXTextField>
+                    </children>
+
+                    <children>
+                        <HBox  alignment="TOP_LEFT" prefHeight="100.0" prefWidth="404.0" spacing="600.0">
+                            <children>
+                                <JFXButton styleClass="button-fab" onAction="#addWord" contentDisplay="LEFT"  maxHeight="20.0" maxWidth="140.0" >
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@/resources/style/add.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    New word
+                                </JFXButton>
+                            </children>
+                        </HBox>
+                    </children>
+                    <children>
+                        <VBox alignment="CENTER" fx:id="wordDisplayBox" visible="false" styleClass="word-container">
+                        <Text fx:id="wordText" text="hello" styleClass="heading-text"/>
+                        <Text fx:id="meaningText"  text="asdfghjklwtyuewdhdftyftyfeew" styleClass="timer-text"/>
+                        <HBox visible="false" alignment="CENTER" prefHeight="47.0" prefWidth="404.0" spacing="30.0" fx:id="wordFunctionsBox">
+                            <children>
+                                <JFXButton fx:id="editBtn" onAction="#updateWord" prefHeight="66.0" prefWidth="100.0" text="Edit" />
+                                <JFXButton  styleClass="button-stop"  onAction="#deleteWord" fx:id="deleteBtn" layoutX="10.0" layoutY="10.0"  prefHeight="66.0" prefWidth="100.0" text="Delete" />
+                            </children>
+                            <VBox.margin>
+                                <Insets top="25.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets bottom="20.0" />
+                            </padding>
+                        </HBox>
+                        </VBox>
+                    </children>
+<!--                    <children>-->
+<!--                        <HBox alignment="CENTER" prefHeight="Infinity" prefWidth="404.0" spacing="30.0">-->
+<!--                            <children>-->
+<!--                                <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" minHeight="400.0" prefWidth="900" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">-->
+<!--                                    <columns>-->
+<!--                                        <TableColumn fx:id="wordCol" prefWidth="100.0" text="Word" />-->
+
+<!--                                    </columns>-->
+<!--                                    <columnResizePolicy>-->
+<!--                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />-->
+<!--                                    </columnResizePolicy>-->
+<!--                                </TableView>-->
+<!--                            </children>-->
+<!--                            <VBox.margin>-->
+<!--                                <Insets top="25.0" />-->
+<!--                            </VBox.margin>-->
+<!--                            <padding>-->
+<!--                                <Insets bottom="20.0" />-->
+<!--                            </padding>-->
+<!--                        </HBox>-->
+<!--                    </children>-->
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

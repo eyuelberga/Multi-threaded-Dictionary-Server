@@ -1,0 +1,11 @@
+package config;
+
+public enum Codes {
+    OPERATION_SUCCESSFUL,
+    OPERATION_FAIL,
+    INVALID_METHOD,
+    DUPLICATE_WORD,
+    METHOD_NOT_SUPPORTED,
+    PARSING_ERROR,
+    SERVER_DOWN,
+}
