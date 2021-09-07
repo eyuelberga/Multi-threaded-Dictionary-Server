@@ -125,8 +125,8 @@ javafx.base/com.sun.javafx.binding=com.jfoenix --add-exports
 javafx.graphics/com.sun.javafx.stage=com.jfoenix --add-exports
 javafx.base/com.sun.javafx.event=com.jfoenix -jar <<path to Jar file>>
 ```
-- <<Path to lib>> – path to library file for javaFX and Jfoenix
-- <<path to Jar file>> – path to the Server.jar file
+- Path to lib – path to library file for javaFX and Jfoenix
+- path to Jar file – path to the Server/Client.jar file
 
 ### Usage Guide
 
